@@ -18,11 +18,10 @@ services:
           name: playto-kyc-db
           property: connectionString
 
-  # Frontend Static Site
+  # Frontend Static Site - NO region for static sites
   - type: web
     name: playto-kyc-frontend
     env: static
-    region: singapore
     buildCommand: cd frontend_kycApp && npm install && npm run build
     staticPublishPath: ./frontend_kycApp/build
     routes:
